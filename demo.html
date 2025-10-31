@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stride for Wellness — Move. Breathe. Flourish.</title>
+  <meta name="description" content="Stride for Wellness — holistic well-being, fitness, mindfulness, and healthy living." />
+  <style>
+    /* ====== Root & Reset ====== */
+
+
+
+ /* ===== NEON BLUE THEME OVERRIDE ===== */
+:root{
+  --bg-0:#010409;          /* deep black-blue */
+  --bg-1:#041126;          /* dark navy blend */
+  --panel:rgba(0,180,255,0.05);
+  --card:#06121e;
+  --glass:rgba(0,180,255,0.06);
+  --muted:#a8d3ff;
+  --text:#e6f4ff;
+  --accent:#00aaff;        /* bright neon blue */
+  --accent-2:#3ccfff;      /* soft sky neon */
+  --glow:rgba(0,170,255,0.3);
+}
+
+/* page background */
+body{
+  background:
+    radial-gradient(circle at top left, rgba(0,170,255,0.25) 0%, transparent 40%),
+    radial-gradient(circle at bottom right, rgba(0,170,255,0.25) 0%, transparent 40%),
+    linear-gradient(180deg,var(--bg-0),var(--bg-1));
+  color:var(--text);
+}
+
+/* header / nav */
+.nav-wrap{
+  background:linear-gradient(90deg, rgba(0,30,60,0.9), rgba(0,60,100,0.7));
+  border:1px s
+
+
+
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+    
+  margin:0;
+  font-family:Inter, system-ui, sans-serif;
+  color:var(--text);
+  line-height:1.55;
+  background:
+    radial-gradient(circle at top left, rgba(0,255,150,0.2) 0%, transparent 40%),
+    radial-gradient(circle at bottom right, rgba(0,255,120,0.2) 0%, transparent 40%),
+    linear-gradient(180deg,var(--bg-0),var(--bg-1));
+  min-height:100vh;
+
+
+}
+
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block}
+    main{padding-top:92px}
+
+    /* ====== Header / Nav ====== */
+    header{
+      position:fixed;
+      top:12px;
+      left:0;
+      right:0;
+      z-index:80;
+      display:flex;
+      justify-content:center;
+      pointer-events:none;
+    }
+    
+     .nav-wrap{
+  max-width:var(--maxw);
+  width:calc(100% - 28px);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 18px;
+  border-radius:14px;
+  pointer-events:auto;
+  background:linear-gradient(90deg, rgba(0,40,25,0.9), rgba(0,80,40,0.7));
+  border:1px solid rgba(0,255,150,0.25);
+  box-shadow:
+    0 0 20px rgba(0,255,150,0.2),
+    0 0 40px rgba(0,255,150,0.15);
+  backdrop-filter:blur(8px);
+}
+
+
+  /* darker transparent teal glass */
+  background: linear-gradient(90deg, rgba(2,25,30,0.85), rgba(5,40,45,0.65));
+  border: 1px solid rgba(14,165,167,0.25);
+
+  /* glowing underlight */
+  box-shadow: 0 4px 24px rgba(14,165,167,0.25), 0 0 18px rgba(3,80,90,0.35);
+  backdrop-filter: blur(8px);
+}
+
+    }
+    .brand{display:flex; gap:12px; align-items:center;}
+    .logo{
+      width:50px; height:50px; border-radius:12px; color:#fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display:flex; align-items:center; justify-content:center; font-weight:800; font-size:16px;
+      box-shadow:0 6px 20px rgba(14,165,167,0.14);
+    }
+    nav{margin-left:auto}
+    nav ul{display:flex; gap:10px; list-style:none; margin:0; padding:0; align-items:center}
+    nav a{padding:8px 12px; border-radius:10px; color:var(--text); font-weight:600; font-size:14px}
+    nav a:hover{background:rgba(14,165,167,0.06)}
+    .cta{background:var(--accent); color:#fff; padding:8px 12px; border-radius:10px; box-shadow:0 8px 30px rgba(14,165,167,0.12)}
+    .hamburger{display:none; border:none; background:transparent; font-size:20px}
+
+    /* ====== Layout / Container ====== */
+    .container{max-width:var(--maxw); margin:28px auto; padding:18px}
+    .card{background:var(--card); border-radius:14px; padding:18px; box-shadow:0 10px 40px rgba(2,6,23,0.05)}
+
+    /* ====== Hero ====== */
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:24px;
+      align-items:center;
+    }
+    .hero-left h1{font-size:36px; margin:0 0 12px}
+    .lead{color:var(--muted); font-size:16px}
+    .hero-ctas{margin-top:16px; display:flex; gap:12px; align-items:center}
+    .pill{padding:8px 12px; border-radius:999px; background:var(--glass); font-weight:600}
+    .kicker{display:inline-block; font-size:13px; padding:6px 10px; border-radius:999px; background:rgba(96,165,250,0.08); color:var(--accent-2); font-weight:700}
+
+    /* ====== Slider (aside) ====== */
+    .slider{border-radius:12px; overflow:hidden; position:relative}
+    .slides{display:flex; transition:transform .6s cubic-bezier(.2,.9,.2,1)}
+    .slide{min-width:100%; height:320px; position:relative}
+    .slide .overlay{position:absolute; left:12px; bottom:12px; right:12px; color:#fff; text-shadow:0 6px 20px rgba(0,0,0,0.25)}
+    .slider-controls{position:absolute; top:8px; right:8px; display:flex; gap:8px; z-index:5}
+    .dot{width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,0.55); cursor:pointer}
+
+    /* ====== Programs grid ====== */
+    .grid{display:grid; gap:16px}
+    .grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .programs .prog{padding:18px; border-radius:12px; transition:transform .25s ease, box-shadow .25s ease; cursor:pointer}
+    .programs .prog:hover{transform:translateY(-6px); box-shadow:0 18px 50px rgba(2,6,23,0.07)}
+    .programs h3{margin:0 0 8px}
+
+    /* ====== Accordion ====== */
+    .accordion{border-radius:10px; overflow:hidden}
+    .acc-item{border-bottom:1px solid #eef6f7}
+    .acc-head{padding:14px; display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-weight:700}
+    .acc-body{padding:0 14px 16px 14px; display:none; color:var(--muted)}
+
+    /* ====== Blog carousel ====== */
+    .blog-row{display:flex; gap:14px; overflow:hidden; padding:6px 0}
+    .blog-card{min-width:340px; flex:0 0 340px; border-radius:12px; padding:14px; background:var(--card); box-shadow:0 8px 30px rgba(2,6,23,0.04)}
+    .meta{font-size:12px; color:var(--muted)}
+
+    /* ====== Contact form ====== */
+   /* === Fix text color in Contact & Join Us form === */
+#contact input,
+#contact textarea {
+  color: #ffffff !important;                     /* typed text is white */
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);              /* soft white placeholder */
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: none;
+  border-color: #00ffff;                         /* neon cyan on focus */
+  box-shadow: 0 0 10px #00ffff;
+  transition: all 0.3s ease;
+}
+12:30 31-10-2025
+
+    /* ====== Footer ====== */
+    footer{margin-top:30px; padding:28px 18px}
+    .footer-inner{max-width:var(--maxw); margin:0 auto; display:flex; justify-content:space-between; gap:18px; align-items:center; flex-wrap:wrap}
+
+    /* ====== Reveal animations ====== */
+    .reveal{opacity:0; transform:translateY(18px); transition:all .7s cubic-bezier(.2,.9,.2,1)}
+    .reveal.show{opacity:1; transform:none}
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .center{display:flex; align-items:center; justify-content:center}
+    .hidden{display:none}
+    .lead-strong{font-weight:600; color:var(--text)}
+
+    /* ====== Habit Match Game (embedded styles) ====== */
+    /* keep these unique to avoid collisions */
+    #habitGame {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(14,165,167,0.02), rgba(96,165,250,0.01));
+      border: 1px solid rgba(14,165,167,0.06);
+    }
+    .habit-header {display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+    .habit-title {font-size:20px; color:var(--accent); font-weight:800}
+    .habit-desc {color:var(--muted); margin-top:8px}
+    .habit-controls {display:flex; gap:10px; align-items:center}
+    .habit-chip {padding:8px 10px; border-radius:999px; background:rgba(255,255,255,0.04); color:var(--muted); font-weight:700}
+    .habit-board {
+      margin-top:12px;
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:12px;
+    }
+    .habit-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border-radius:12px;
+      height:120px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:20px;
+      color:transparent;
+      cursor:pointer;
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.02);
+      perspective:900px;
+    }
+    .habit-inner {
+      width:100%; height:100%; transition: transform .46s cubic-bezier(.2,.9,.2,1); transform-style:preserve-3d; position:relative;
+    }
+    .habit-card.flipped .habit-inner { transform: rotateY(180deg); }
+    .habit-face {
+      position:absolute; inset:0; display:flex; align-items:center; justify-content:center; backface-visibility:hidden; border-radius:12px; padding:10px; text-align:center;
+    }
+    .habit-back { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color:#001; font-weight:900; font-size:20px; }
+    .habit-front { background:transparent; color:var(--text); transform: rotateY(180deg); font-weight:700; }
+    .habit-card.matched { box-shadow: 0 12px 40px rgba(14,165,167,0.10); border:1px solid rgba(14,165,167,0.18); animation: matchedGlow .9s ease; }
+    @keyframes matchedGlow { 0% { box-shadow:0 0 0 rgba(14,165,167,0); } 50% { box-shadow:0 15px 45px rgba(14,165,167,0.18);} 100%{box-shadow:0 0 0 rgba(14,165,167,0);} }
+
+    .habit-footer {margin-top:12px; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap}
+    .habit-message {color:var(--muted); font-weight:700}
+
+    /* responsive */
+    @media (max-width:920px){ .habit-board { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width:640px){ .habit-board { grid-template-columns: repeat(2, 1fr); } .habit-card{ height:100px } }
+/* ===== Neon Blue Animated Underlight ===== */
+
+/* Body glow effect (subtle moving gradient underlight) */
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(0,170,255,0.15), transparent 60%),
+    radial-gradient(circle at 90% 90%, rgba(0,140,255,0.15), transparent 60%),
+    linear-gradient(180deg, #010409, #041126);
+  background-size: 200% 200%;
+  animation: bgPulse 12s ease-in-out infinite alternate;
+}
+
+@keyframes bgPulse {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* ===== Button Glow Animation ===== */
+.cta {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #001;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 800;
+  box-shadow: 0 0 25px rgba(0,170,255,0.4),
+              0 0 45px rgba(0,170,255,0.2),
+              inset 0 0 10px rgba(0,170,255,0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* moving glow inside button */
+.cta::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,170,255,0.6) 0%, transparent 60%);
+  animation: pulseGlow 3s linear infinite;
+  opacity: 0.4;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+}
+
+/* hover: intensify glow + lift */
+.cta:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 35px rgba(0,170,255,0.6),
+              0 0 70px rgba(0,170,255,0.4);
+  color: #001;
+}
+
+/* pill buttons also glow subtly */
+.pill {
+  background: rgba(0,170,255,0.1);
+  color: var(--text);
+  border: 1px solid rgba(0,170,255,0.3);
+  box-shadow: 0 0 15px rgba(0,170,255,0.2);
+  transition: all 0.3s ease;
+}
+.pill:hover {
+  background: rgba(0,170,255,0.25);
+  box-shadow: 0 0 30px rgba(0,170,255,0.4);
+  transform: translateY(-2px);
+}
+
+  </style>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <div class="nav-wrap">
+      <div class="brand">
+        <div class="logo">SW</div>
+        <div>
+          <div style="font-weight:800">Stride for Wellness</div>
+          <div style="font-size:12px;color:var(--muted)">Move. Breathe. Flourish.</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#programs" class="nav-link">Programs</a></li>
+          <li><a href="#resources" class="nav-link">Resources</a></li>
+          <li><a href="#contact" class="cta nav-link">Join Us</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- HOME / HERO -->
+      <section id="home" class="card hero reveal">
+        <div class="hero-left">
+          <span class="kicker">Start Today</span>
+          <h1>Your Journey to Wellness Begins Here</h1>
+          <p class="lead">Stride for Wellness blends movement, mindful practice, and practical nutrition to create a gentle, science-backed path toward daily well-being. We design short, repeatable practices that fit into busy schedules so you build momentum rather than pressure.</p>
+
+          <p class="lead-strong" style="margin-top:10px">Here’s what a small change can do: a 10-minute morning routine can improve your focus, energy, and mood for the entire day. Consistency compounds; we help you design habits that actually stick.</p>
+
+          <div class="hero-ctas">
+            <a href="#programs" class="cta" role="button">Explore Programs</a>
+            <a href="#contact" class="pill" role="button">Subscribe for Tips</a>
+          </div>
+
+          <div style="margin-top:18px" class="muted">
+            <strong>Quote:</strong> “Small steps, consistent strides — that’s how lasting wellness is built.”
+          </div>
+
+          <div style="margin-top:18px" class="card" aria-hidden="false">
+            <h4 style="margin:0 0 6px">Quick Start — 5 Micro Habits</h4>
+            <ul class="muted">
+              <li>Morning 5-minute mobility routine to wake the joints.</li>
+              <li>10-minute mindful walk in natural light to lift mood.</li>
+              <li>One balanced meal with protein, veg, and whole grain.</li>
+              <li>Daily 3–5 minute breathing practice before bed.</li>
+              <li>Hydration habit: 1 glass of water on waking and one per hour.</li>
+            </ul>
+            <div style="margin-top:8px">
+              <button onclick="startMiniChallenge()" class="cta">Start a 7-day Mini Challenge</button>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h4 style="margin:0 0 6px">How we help</h4>
+            <p class="muted">We provide structured starter plans, short guided videos, and a gentle accountability loop. Our step-by-step approach removes decision fatigue and gives you small wins each week.</p>
+            <p class="muted">You’ll find easy checklists, short instructional clips, practical meal swaps, and clear progress markers so improvement becomes visible — and motivating.</p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="slider" id="mainSlider">
+            <div class="slides">
+              <div class="slide" style="background:url('data:image/webp;base64,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') center/cover no-repeat">
+                <div class="overlay"><h3 style="margin:0">Morning Run</h3><div class="muted">Start gentle, build consistency.</div></div>
+              </div>
+              <div class="slide" style="background:url('data:image/webp;base64,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') center/cover no-repeat">
+                <div class="overlay"><h3 style="margin:0">Yoga Flow</h3><div class="muted">Mobility and calm for the nervous system.</div></div>
+              </div>
+              <div class="slide" style="background:url('https://th.bing.com/th/id/OIP.J8uMTyhLGkFxTa5JJ9tlSgHaFj?w=200&h=200&c=10&o=6&pid=genserp&rm=2') center/cover no-repeat">
+                <div class="overlay"><h3 style="margin:0">Mindful Pause</h3><div class="muted">Short practices to refocus your day.</div></div>
+              </div>
+            </div>
+
+            <div class="slider-controls" aria-hidden="true">
+              <div id="sliderDots" class="center" style="gap:8px; display:flex; align-items:center"></div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h4 style="margin:0 0 6px">Member Tip</h4>
+            <p class="muted">If you only have five minutes, try a focused breathing practice: inhale 4s, hold 2s, exhale 6s. Repeat 6–8 cycles. Notice calm and clarity increase almost immediately.</p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="card reveal" style="margin-top:22px">
+        <h2>About Stride for Wellness</h2>
+        <p class="muted">Stride for Wellness started as a small community walking group and grew into an inclusive platform focused on sustainable wellbeing. We center accessibility and evidence-informed practices so improvements are safe, measurable, and attainable.</p>
+        <!-- ... rest of About (unchanged) ... -->
+      </section>
+
+      <!-- PROGRAMS -->
+      <section id="programs" class="card reveal" style="margin-top:22px">
+        <!-- ... programs content unchanged ... -->
+      </section>
+
+      <!-- RESOURCES / BLOG -->
+      <section id="resources" class="card reveal" style="margin-top:22px">
+        <h2>Resources & Blog — Practical Guides</h2>
+        <p class="muted">Our resources focus on quick, evidence-informed tips you can apply immediately: movement primers, nutrition swaps, habit design, and member stories that show slow and steady progress.</p>
+
+        <div style="margin-top:12px" class="blog-row" id="blogRow">
+          <!-- blog cards (unchanged) -->
+          <article class="blog-card">
+            <h3>5 Ways to Build a Lasting Morning Routine</h3>
+            <div class="meta">March 10, 2025 · 8 min read</div>
+            <p class="muted">Start by choosing one anchor — a reliable habit you already do. Attach a short movement or breathing practice to that anchor. For example: after brushing teeth, do two minutes of gentle mobility. Over time add one new move or meditation to this anchor.</p>
+            <p class="muted">Keep the routine under 10 minutes for at least the first four weeks. Small wins build the habit loop and protect motivation.</p>
+          </article>
+          <article class="blog-card">
+            <h3>Why Walks Are Medicine</h3>
+            <div class="meta">Feb 18, 2025 · 6 min read</div>
+            <p class="muted">Walking outdoors reduces stress hormones, increases blood flow to the brain, and often improves mood more than indoor exercise. Try mindful walking: notice each step, your breath, and the environment for five minutes — it trains attention as well as motion.</p>
+            <p class="muted">Add slow intervals or slight uphill segments for gentle cardiovascular gains without heavy impact.</p>
+          </article>
+          <article class="blog-card">
+            <h3>Quick Meal Templates</h3>
+            <div class="meta">Jan 5, 2025 · 6 min read</div>
+            <p class="muted">A balanced plate simplifies decisions: aim for half vegetables, one quarter protein, and one quarter whole grains. Use simple seasoning and batch-cooked proteins to save time. Snacks: Greek yogurt + nuts, fruit + cottage cheese.</p>
+            <p class="muted">Hydrate consistently through the day and replace sugary beverages with sparkling water or herbal teas.</p>
+          </article>
+        </div>
+
+        <div style="margin-top:12px; display:flex; gap:12px; align-items:center">
+          <button onclick="prevBlog()" class="pill">◀</button>
+          <button onclick="nextBlog()" class="pill">▶</button>
+          <button class="cta" onclick="document.getElementById('gameAnchor').scrollIntoView({behavior:'smooth'})">Play Healthy Habit Match</button>
+        </div>
+
+        <div style="margin-top:18px" class="card">
+          <h3>Tools & Checklists</h3>
+          <ul class="muted">
+            <li>Hydration tracker — aim for steady sips across the day.</li>
+            <li>Movement micro-goals — 3× 5-minute movement breaks daily.</li>
+            <li>Sleep log — track bedtime, wake time, perceived rest.</li>
+            <li>Mood check-ins — note one emotional shift per day for awareness.</li>
+          </ul>
+          <p class="muted">Consistent tracking makes trends visible — and visible trends keep motivation alive.</p>
+        </div>
+
+        <!-- ===== Embedded Game (appears here) ===== -->
+        <div id="gameAnchor" class="card" style="margin-top:18px">
+          <div id="habitGame">
+            <div class="habit-header">
+              <div>
+                <div class="habit-title">Fun Zone — Healthy Habit Match</div>
+                <div class="habit-desc muted">Flip cards to match the habit icons with their descriptions. This builds attention and reinforces healthy choices.</div>
+              </div>
+              <div class="habit-controls">
+                <div class="habit-chip" id="movesChip">Moves: 0</div>
+                <div class="habit-chip" id="pairsChip">Pairs: 0 / 6</div>
+                <div class="habit-chip" id="timeChip">Time: 00:00</div>
+                <button class="cta" id="restartGameBtn" style="margin-left:10px">Restart</button>
+                <button class="pill" id="shuffleGameBtn">Shuffle</button>
+              </div>
+            </div>
+
+            <div class="habit-board" id="habitBoard" aria-live="polite" style="margin-top:12px"></div>
+
+            <div class="habit-footer">
+              <div class="habit-message" id="habitMessage">Match icons to habit descriptions — good luck!</div>
+              <div style="display:flex; gap:8px">
+                <button class="pill" onclick="document.getElementById('home').scrollIntoView({behavior:'smooth'})">Back to top</button>
+                <a class="pill" href="./plan.pdf" target="_blank" rel="noopener noreferrer">Open 7-Day Plan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===== end embedded game ===== -->
+
+      </section>
+
+      <!-- CONTACT / JOIN -->
+      <section id="contact" class="card reveal" style="margin-top:22px">
+        <h2>Contact & Join Us</h2>
+        <p class="muted">We welcome questions, partnership inquiries, and member stories. Join a challenge, sign up for our newsletter, or contact coaching for personalized plans.</p>
+
+       <form action="https://formspree.io/f/mjkpaayl" method="POST">
+  <input type="text" name="name" placeholder="Your name" required>
+  <input type="email" name="email" placeholder="email@example.com" required>
+  <textarea name="message" placeholder="Message" rows="5" required></textarea>
+  <button type="submit" class="cta">Send Message</button>
+</form>
+
+
+          <label for="subject" style="margin-top:8px">Subject</label>
+          <input id="subject" type="text" placeholder="How can we help?" />
+
+          <label for="message" style="margin-top:8px">Message</label>
+          <textarea id="message" rows="6" placeholder="Tell us briefly what you need..." required></textarea>
+
+          <div style="display:flex; gap:12px; margin-top:12px; align-items:center">
+            <button type="submit" class="cta">Send Message</button>
+            <button type="button" onclick="subscribePrompt()" class="pill">Subscribe</button>
+            <div id="status" class="muted" style="margin-left:8px"></div>
+
+          </div>
+        </form>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="reveal" style="margin-top:18px">
+        <div class="footer-inner">
+          <div>
+            <div style="font-weight:800">Stride for Wellness</div>
+            <div class="muted">© 2025 — Move. Breathe. Flourish.</div>
+          </div>
+
+          <div style="display:flex; gap:12px; align-items:center">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#home" class="pill">Back to top</a>
+          
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // ===== Smooth scroll for nav links =====
+    document.querySelectorAll('a.nav-link').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const href = a.getAttribute('href');
+        if(href && href.startsWith('#')){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+
+    // ===== Mobile menu (simple toggle) =====
+    function toggleMobileMenu(){
+      const nav = document.querySelector('nav ul');
+      if(!nav) return;
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.background = 'rgba(255,255,255,0.95)';
+      nav.style.padding = '12px';
+      nav.style.position = 'absolute';
+      nav.style.top = '66px';
+      nav.style.right = '12px';
+      nav.style.borderRadius = '10px';
+    }
+
+    // ===== Reveal on scroll =====
+    const observer = new IntersectionObserver((items)=>{
+      items.forEach(item=>{
+        if(item.isIntersecting) item.target.classList.add('show');
+      });
+    }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    // ===== Simple slider =====
+    (function(){
+      const slider = document.getElementById('mainSlider');
+      if(!slider) return;
+      const slides = slider.querySelector('.slides');
+      const total = slides.children.length;
+      let idx = 0;
+
+      // dots
+      const dotsWrap = document.getElementById('sliderDots');
+      for(let i=0;i<total;i++){
+        const d = document.createElement('div');
+        d.className = 'dot';
+        d.dataset.i = i;
+        d.title = 'Go to slide ' + (i+1);
+        d.addEventListener('click', ()=>{ idx = i; update(); reset(); });
+        dotsWrap.appendChild(d);
+      }
+
+      function update(){
+        slides.style.transform = `translateX(-${idx * 100}%)`;
+        [...dotsWrap.children].forEach((dot, i)=> dot.style.opacity = i===idx ? '1' : '0.55');
+      }
+
+      update();
+      let timer = setInterval(()=>{ idx = (idx+1)%total; update(); }, 3800);
+      function reset(){ clearInterval(timer); timer = setInterval(()=>{ idx = (idx+1)%total; update(); }, 3800); }
+    })();
+
+    // ===== Accordion (Programs) =====
+    document.querySelectorAll('.acc-head').forEach(head=>{
+      head.addEventListener('click', ()=>{
+        const body = head.nextElementSibling;
+        const open = body.style.display === 'block';
+        document.querySelectorAll('.acc-body').forEach(b=>b.style.display='none');
+        body.style.display = open ? 'none' : 'block';
+      });
+    });
+
+    // ===== Blog Carousel (simple nav) =====
+    function nextBlog(){ const row = document.getElementById('blogRow'); row.scrollBy({left: 360, behavior:'smooth'}); }
+    function prevBlog(){ const row = document.getElementById('blogRow'); row.scrollBy({left: -360, behavior:'smooth'}); }
+
+    // ===== Contact form handling (mock) =====
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){
+        document.getElementById('status').textContent = 'Please fill name, email and message.';
+        return false;
+      }
+      // Basic email format check
+      if(!/^\S+@\S+\.\S+$/.test(email)){
+        document.getElementById('status').textContent = 'Please enter a valid email.';
+        return false;
+      }
+      document.getElementById('status').textContent = 'Thanks, ' + name + '! Your message was received (demo).';
+      e.target.reset();
+      return false;
+    }
+
+    // ===== Subscribe prompt (demo) =====
+    function subscribePrompt(){
+      const email = prompt('Enter your email to subscribe to Stride for Wellness tips');
+      if(email && /^\S+@\S+\.\S+$/.test(email)){
+        alert('Thanks! Subscribed (demo): ' + email);
+      }else if(email){
+        alert('Please enter a valid email.');
+      }
+    }
+
+    // ===== Mini-challenge demo =====
+    function startMiniChallenge(){
+      alert('7-day Mini Challenge started (demo). We recommend 5–10 minute daily practices. Good luck!');
+    }
+
+    // ===== Starter quiz (demo) =====
+    function takeQuiz(){
+      const q1 = confirm('Do you prefer morning routines? (OK = yes, Cancel = no)');
+      const q2 = confirm('Do you have an existing movement routine? (OK = yes, Cancel = no)');
+      const q3 = confirm('Would you prefer shorter daily practices (OK) or longer weekly sessions (Cancel)?');
+      let rec = 'Balanced Plan: 3 micro-habits a day';
+      if(!q1) rec = 'Evening-friendly Plan: wind-down practices';
+      if(!q2) rec = 'Beginner Plan: 10 min daily';
+      alert('Recommended: ' + rec + ' (demo). We will email a starter plan if you subscribe.');
+    }
+
+    // =========================
+    // Healthy Habit Match - embedded game logic
+    // =========================
+    (function(){
+      // pairs: [emoji, description]
+      const pairs = [
+        {id:1, emoji:'💧', text:'Drink water — hydrate regularly'},
+        {id:2, emoji:'🧘‍♀️', text:'Take 5 deep breaths to relax'},
+        {id:3, emoji:'🥗', text:'Eat a balanced, colorful meal'},
+        {id:4, emoji:'🚶‍♂️', text:'Walk for 10 minutes'},
+        {id:5, emoji:'🛌', text:'Wind-down 30 minutes before bed'},
+        {id:6, emoji:'📝', text:'Reflect on one good thing daily'}
+      ];
+
+      // build deck with two card types per pair: emoji and text
+      function buildDeck(){
+        const deck = [];
+        pairs.forEach(p=>{
+          deck.push({pairId:p.id, kind:'emoji', label:p.emoji});
+          deck.push({pairId:p.id, kind:'text', label:p.text});
+        });
+        return deck;
+      }
+
+      function shuffle(arr){
+        for(let i=arr.length-1;i>0;i--){
+          const j=Math.floor(Math.random()*(i+1));
+          [arr[i],arr[j]]=[arr[j],arr[i]];
+        }
+        return arr;
+      }
+
+      const boardEl = document.getElementById('habitBoard');
+      const movesChip = document.getElementById('movesChip');
+      const pairsChip = document.getElementById('pairsChip');
+      const timeChip = document.getElementById('timeChip');
+      const messageEl = document.getElementById('habitMessage');
+      const restartBtn = document.getElementById('restartGameBtn');
+      const shuffleBtn = document.getElementById('shuffleGameBtn');
+
+      let deck = [];
+      let first = null, second = null, busy=false;
+      let moves = 0, matched = 0, totalPairs = pairs.length;
+      let timer = 0, timerInterval = null, started=false;
+
+      function startTimer(){
+        if(timerInterval) clearInterval(timerInterval);
+        timer = 0;
+        timerInterval = setInterval(()=>{
+          timer++;
+          const mm = String(Math.floor(timer/60)).padStart(2,'0');
+          const ss = String(timer%60).padStart(2,'0');
+          timeChip.textContent = `Time: ${mm}:${ss}`;
+        },1000);
+      }
+      function stopTimer(){
+        if(timerInterval) clearInterval(timerInterval);
+        timerInterval = null; started=false;
+      }
+
+      function renderBoard(){
+        boardEl.innerHTML = '';
+        deck = shuffle(buildDeck());
+        deck.forEach((cardData, idx)=>{
+          const card = document.createElement('div');
+          card.className = 'habit-card';
+          card.tabIndex = 0;
+          card.dataset.pair = cardData.pairId;
+          card.dataset.kind = cardData.kind;
+          card.dataset.key = cardData.label;
+          // inner structure
+          const inner = document.createElement('div');
+          inner.className = 'habit-inner';
+          const back = document.createElement('div');
+          back.className = 'habit-face habit-back';
+          back.textContent = (cardData.kind === 'emoji') ? cardData.label : 'Habit';
+          const front = document.createElement('div');
+          front.className = 'habit-face habit-front';
+          front.textContent = (cardData.kind === 'text') ? cardData.label : cardData.label;
+          inner.appendChild(back);
+          inner.appendChild(front);
+          card.appendChild(inner);
+
+          // interactions
+          card.addEventListener('click', ()=> flipCard(card));
+          card.addEventListener('keydown', (e)=>{ if(e.key === 'Enter' || e.key === ' ') flipCard(card); });
+          boardEl.appendChild(card);
+        });
+
+        // reset UI
+        moves = 0; matched = 0;
+        movesChip.textContent = `Moves: ${moves}`;
+        pairsChip.textContent = `Pairs: ${matched} / ${totalPairs}`;
+        timeChip.textContent = 'Time: 00:00';
+        messageEl.textContent = 'Match icons to habit descriptions.';
+        stopTimer();
+        first = second = null; busy = false;
+      }
+
+      function flipCard(card){
+        if(busy) return;
+        if(card.classList.contains('flipped') || card.classList.contains('matched')) return;
+        if(!started){ started = true; startTimer(); }
+        card.classList.add('flipped');
+        if(!first){ first = card; return; }
+        if(card === first) return;
+        second = card;
+        moves++; movesChip.textContent = `Moves: ${moves}`;
+        busy = true;
+
+        setTimeout(()=>{ checkMatch(); }, 500);
+      }
+
+      function checkMatch(){
+        if(!first || !second) { busy=false; return; }
+        const a = first.dataset.pair, b = second.dataset.pair;
+        if(a === b){
+          first.classList.add('matched');
+          second.classList.add('matched');
+          matched++; pairsChip.textContent = `Pairs: ${matched} / ${totalPairs}`;
+          messageEl.textContent = pickMotivation(matched);
+          if(matched === totalPairs){
+            stopTimer();
+            setTimeout(()=> messageEl.innerHTML = `🎉 You matched all habits! Moves: ${moves}. Time: ${timeChip.textContent.split(' ')[1]}. Great job!`, 400);
+          }
+          // clear selections
+          first = second = null;
+          busy = false;
+        } else {
+          // flip back
+          setTimeout(()=>{
+            first.classList.remove('flipped');
+            second.classList.remove('flipped');
+            first = second = null;
+            busy = false;
+          }, 600);
+        }
+      }
+
+      function pickMotivation(n){
+        const msgs = [
+          'Nice — hydration is key.',
+          'Calm and focused — great breath work.',
+          'Nutrition matters — keep the color on your plate.',
+          'Movement boosts mood — love that walk!',
+          'Rest matters — good sleep keeps you steady.',
+          'Reflection builds resilience — well done.'
+        ];
+        return msgs[(n-1) % msgs.length] || 'Keep going!';
+      }
+
+      // controls
+      restartBtn.addEventListener('click', ()=>{ deck = shuffle(buildDeck()); renderBoard(); });
+      shuffleBtn.addEventListener('click', ()=>{ deck = shuffle(buildDeck()); renderBoard(); });
+
+      // initial render
+      renderBoard();
+
+      // expose small API for debug if necessary
+      window.habitGame = { restart: ()=> renderBoard() };
+
+    })();
+  </script>
+</body>
+</html>
